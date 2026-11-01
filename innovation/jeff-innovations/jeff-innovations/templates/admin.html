@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Requests | Jeff Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-logo">
+            <h2>Jeff Innovations</h2>
+            <span>Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Back to Site</a></li>
+            <li><a href="{{ url_for('admin_logout') }}">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-dashboard">
+        <h2 class="section-title">Service Requests ({{ requests|length }})</h2>
+
+        {% if requests %}
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Service</th>
+                    <th>Message</th>
+                    <th>Received</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in requests %}
+                <tr>
+                    <td>{{ r.name }}</td>
+                    <td>{{ r.contact }}</td>
+                    <td>{{ r.service }}</td>
+                    <td>{{ r.message or "—" }}</td>
+                    <td>{{ r.created_at.strftime('%d %b %Y, %H:%M') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="empty-state">No service requests yet.</p>
+        {% endif %}
+    </section>
+</body>
+</html>

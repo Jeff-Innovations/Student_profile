@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Jephthah Ampadu Boateng</title>
+    <!-- Modern Tech Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --secondary: #0284c7;
+            --ink: #0f172a;
+            --slate: #475569;
+            --border: #e2e8f0;
+            --bg: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .cv-actions {
+            max-width: 860px;
+            margin: 0 auto 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 20px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+        .btn-action:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--border);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: #fff;
+            border-color: var(--primary);
+        }
+
+        .cv-paper {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px 65px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            border-top: 6px solid var(--primary);
+        }
+
+        .cv-header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 28px;
+            margin-bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .cv-name h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+
+        .cv-name p {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+
+        .cv-contact {
+            text-align: right;
+            font-size: 0.88rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .cv-contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cv-section {
+            margin-bottom: 28px;
+        }
+
+        .cv-section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            color: var(--ink);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cv-item {
+            margin-bottom: 18px;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 0.96rem;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
+
+        .cv-item-sub {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: var(--secondary);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .cv-item p {
+            font-size: 0.9rem;
+            color: var(--slate);
+        }
+
+        .cv-item ul {
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: var(--slate);
+            margin-top: 6px;
+        }
+
+        .cv-item ul li {
+            margin-bottom: 4px;
+        }
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .skills-table td {
+            padding: 8px 0;
+            vertical-align: top;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .skills-table td:first-child {
+            width: 28%;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .skills-table td:last-child {
+            color: var(--slate);
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .cv-actions { display: none; }
+            .cv-paper {
+                box-shadow: none;
+                border: none;
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-actions">
+        <a href="index.html" class="btn-action btn-outline">&larr; Return to Interactive Portfolio</a>
+        <button onclick="window.print()" class="btn-action">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <div class="cv-paper">
+        <header class="cv-header">
+            <div class="cv-name">
+                <h1>Jephthah Ampadu Boateng</h1>
+                <p>Computer Technology Scholar &bull; Full-Stack Web &amp; Creative Designer</p>
+            </div>
+            <div class="cv-contact">
+                <div>Kumasi, Ashanti Region, Ghana</div>
+                <div><a href="tel:+233597654220">+233 597 654 220</a></div>
+                <div><a href="mailto:jeffboat2007@gmail.com">jeffboat2007@gmail.com</a></div>
+                <div><a href="https://github.com/ampadu2007" target="_blank">github.com/ampadu2007</a></div>
+            </div>
+        </header>
+
+        <section class="cv-section">
+            <h2 class="cv-section-title">Professional Summary</h2>
+            <p style="font-size: 0.92rem; color: var(--slate);">
+                Motivated Level 100 BTech Computer Technology student at Kumasi Technical University (KsTU). Demonstrates hands-on competency in front-end web engineering, Java OOP programming, open-source Linux operating systems, and computer hardware diagnostics. Entrepreneurial founder of Mr. Jeff's Designs and Mr. Blackee's Data Hub, with proven leadership as Deputy Communication Director for GNAAS KsTU AYM.
+            </p>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="cv-section-title">Education</h2>
+            
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span>Kumasi Technical University (KsTU)</span>
+                    <span>Kumasi, Ghana</span>
+                </div>
+                <div class="cv-item-sub">
+                    <span>Bachelor of Technology (BTech) in Computer Technology</span>
+                    <span>2025 &ndash; Present</span>
+                </div>
+                <p>Relevant Coursework: Front End Web Development, Intro to Programming in Java, Open-Source Operating Systems, Computer Hardware &amp; Maintenance, Problem Solving &amp; Critical Thinking, Probability &amp; Statistics.</p>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span>Jacobu Senior High Technical School</span>
+                    <span>Jacobu, Ghana</span>
+                </div>
+                <div class="cv-item-sub">
+                    <span>West African Senior School Certificate (WASSCE)</span>
+                    <span>Completed 2024</span>
+                </div>
+                <p>Technical and science concentration with active involvement in school IT and academic activities.</p>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span>Fiankoma D/A J.H.S</span>
+                    <span>Fiankoma, Ghana</span>
+                </div>
+                <div class="cv-item-sub">
+                    <span>Basic Education Certificate Examination (BECE)</span>
+                    <span>Completed 2021</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="cv-section-title">Technical Proficiencies</h2>
+            <table class="skills-table">
+                <tr>
+                    <td>Web Engineering:</td>
+                    <td>HTML5, Modern CSS3, JavaScript (ES6+), Flexbox, CSS Grid, Responsive Architecture</td>
+                </tr>
+                <tr>
+                    <td>Programming:</td>
+                    <td>Java (Object-Oriented Programming, Logic &amp; Algorithms), Python fundamentals</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems:</td>
+                    <td>Linux / Open-Source OS command line, Windows Administration</td>
+                </tr>
+                <tr>
+                    <td>Hardware &amp; IT:</td>
+                    <td>PC Troubleshooting, Hardware Diagnostics, Component Assembly &amp; Maintenance</td>
+                </tr>
+                <tr>
+                    <td>Creative Design:</td>
+                    <td>Adobe Photoshop, Digital Flyer Design, Brand Identity &amp; Typography</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="cv-section-title">Experience &amp; Leadership</h2>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span>Founder &amp; Lead Designer</span>
+                    <span>2024 &ndash; Present</span>
+                </div>
+                <div class="cv-item-sub">
+                    <span>Mr. Jeff's Designs &bull; Kumasi, Ghana</span>
+                    <span>Creative Agency</span>
+                </div>
+                <ul>
+                    <li>Designed brand logos, promotional flyers, and social media digital media for commercial clients and student organizations.</li>
+                    <li>Ensured on-time delivery of print-ready and digital marketing assets adhering to client specifications.</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span>Deputy Communication Director</span>
+                    <span>2025 &ndash; Present</span>
+                </div>
+                <div class="cv-item-sub">
+                    <span>GNAAS KsTU AYM &bull; Kumasi, Ghana</span>
+                    <span>Youth Leadership</span>
+                </div>
+                <ul>
+                    <li>Spearhead digital communication, announcements, and tech support for member activities across the university campus.</li>
+                    <li>Coordinate media broadcasts and digital public relations for youth ministry programs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2 class="cv-section-title">Languages &amp; Soft Skills</h2>
+            <p style="font-size: 0.92rem; color: var(--slate);">
+                <strong>Languages:</strong> English (Fluent / Professional), Twi (Native).<br>
+                <strong>Soft Skills:</strong> Team Leadership, Analytical Problem Solving, Time Management, Creative Visual Direction, Public Communication.
+            </p>
+        </section>
+    </div>
+
+</body>
+</html>
