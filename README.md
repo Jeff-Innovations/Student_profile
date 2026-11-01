@@ -49,3 +49,4 @@ student-profile/
 ---
 
 &copy; 2026 Jephthah Ampadu Boateng. Kumasi Technical University (KsTU).
+
